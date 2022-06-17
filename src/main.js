@@ -25,3 +25,4 @@ const fn = () => {
   console.log('你好');
 }
 fn()
+import APP from './app.vue'
