@@ -1,7 +1,7 @@
 // const psth = require("path")
+const { VueLoaderPlugin } = require("vue-loader");
 const { join } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { VueLoaderPlugin } = require("vue-loader");
 
 module.exports = {
   mode: "development",
