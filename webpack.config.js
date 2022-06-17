@@ -32,7 +32,30 @@ module.exports = {
             },
             {
                 test:/\.(png|jpg|gif|jpeg)$/i,
-                type:'asset'
+                type:'asset',
+                // parser: {
+                //     dataUrlCondition: {
+                //         maxSize: 21 * 1024
+                //     }
+                // }
+                generator: {
+                    filename: 'images/[hash:6][ext]'
+                }
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/i,
+                type: "asset/resource",
+                generator: {
+                    filename: 'fonts/[hash:6][ext]'
+                }
+            },
+            {
+                test: /\.js$/,
+                /* loader: "babel-loader",
+                options: {
+                    presets: ['@babel/preset-env']
+                  } */
+                use: ["babel-loader"]
             }
         ]
     }
